@@ -1,0 +1,277 @@
+.app {
+  background-color: #3f82f4;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #3f82f4;
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: linear-gradient(#1e1e1e, rgba(225, 228, 235, 0.01));
+}
+
+.highlight-orange {
+  color: #f1680e;
+}
+
+.nav-header {
+  color: white;
+}
+
+.navbar > a {
+  font-size: 2.25rem;
+}
+
+.btn {
+  border-radius: 2rem;
+  color: white !important;
+}
+
+.btn-secondary {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: transparent;
+  color: #808080 !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.btn-secondary:hover {
+  background: #f1680e;
+  color: white !important;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+}
+
+.nav-link:hover {
+  background: #f1680e;
+  outline: none;
+  border-color: transparent;
+}
+
+.navbar-collapse {
+  justify-content: space-around;
+}
+
+.card-heading {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  color: #808080;
+  font-family: "Martel", serif;
+  border-bottom-style: double;
+  border-color: #f1680e;
+}
+
+.info-card {
+  position: relative;
+  width: 80%;
+  height: 50vh;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
+  z-index: 1;
+}
+
+.info-card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem;
+  background: white;
+}
+
+.card-image {
+  height: 25rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+}
+
+.card-image-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.orange-rectangle {
+  position: absolute;
+  height: 80%;
+  width: 2rem;
+  left: -2rem;
+  background-color: #f1680e;
+}
+
+.grey-square {
+  position: absolute;
+  height: 15rem;
+  width: 15rem;
+  right: 1rem;
+  bottom: -3rem;
+  background-color: #d9d9d9 !important;
+  z-index: -2;
+}
+
+.plus-card-background {
+  position: absolute;
+  height: 55%;
+  width: 60%;
+  top: -2rem;
+  left: -4rem;
+  background-color: transparent !important;
+  background-image: url("../assets/Untitled2.png") !important;
+  background-size: cover;
+}
+
+.come-in-left-animation {
+  transform: translateX(-150px);
+  animation: come-in-left-animation 0.8s ease forwards;
+}
+.come-in-left-animation:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@keyframes come-in-left-animation {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.come-in-right-animation {
+  transform: translateX(150px);
+  animation: come-in-right-animation 0.8s ease forwards;
+}
+.come-in-right-animation:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@keyframes come-in-right-animation {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.arrows {
+  width: 60px;
+  height: 80px;
+  position: fixed;
+  left: 50%;
+  margin-left: -10%;
+  bottom: 1px;
+  z-index: 9;
+}
+.arrows path {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 2.5px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
+@media screen and (max-width: 1199px) {
+  .nav-link {
+    font-size: 0.6rem;
+  }
+  .card-image {
+    height: 21rem;
+  }
+  .grey-square {
+    right: 0rem;
+    bottom: -2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .nav-link {
+    width: fit-content;
+    margin: auto;
+  }
+  .info-card {
+    margin-bottom: 20rem;
+  }
+  .card-image {
+    aspect-ratio: 1.5;
+  }
+  .grey-square {
+    right: -3rem;
+    bottom: -16rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar > a {
+    font-size: 2rem;
+  }
+  .info-card {
+    margin-bottom: 15rem;
+  }
+  .card-image {
+    height: 16rem;
+  }
+  .grey-square {
+    right: -3rem;
+    bottom: -11rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-card {
+    margin-bottom: 15rem;
+  }
+  .card-image {
+    height: 15rem;
+  }
+  .grey-square {
+    right: -3rem;
+    bottom: -10rem;
+  }
+}
