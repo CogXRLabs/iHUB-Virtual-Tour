@@ -232,8 +232,9 @@ canvas {
 
 @media screen and (max-width: 990px) {
   .nav-link {
-    width: fit-content;
-    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: transparent;
   }
   .info-card {
     margin-bottom: 20rem;
@@ -273,5 +274,29 @@ canvas {
   .grey-square {
     right: -3rem;
     bottom: -10rem;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .navbar > a {
+    font-size: 1.5rem;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-brand > strong {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  .card-image {
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 437px) {
+  .navbar-brand > strong {
+    display: none;
   }
 }
