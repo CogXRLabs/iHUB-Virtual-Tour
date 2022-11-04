@@ -13,15 +13,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
-  <title>Document</title>
+  <title>iHub Divyasampark - Virtual Walkthrough</title>
 </head>
 
 <body class="app">
   <div id="background"></div>
   <canvas id="nokey" width="800" height="800">
   </canvas>
-  <!-- Image and text -->
   <div class="container">
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark pt-4">
       <a class="navbar-brand" href="#">
         <img src="images/IITR.png" width="60" height="55" class="d-inline-block align-top" alt="">
@@ -35,55 +35,73 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active mx-1">
-            <a class="nav-link btn btn-primary px-3 mx-2" href="#"><strong>TIH MAIN OFFICE</strong></a>
+            <a class="nav-link btn btn-primary px-3 mx-2" href="#main-office"><strong>TIH MAIN OFFICE</strong></a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link btn btn-primary px-3 mx-2" href="#"><strong>TIH INCUBATION OFFICE</strong></a>
+            <a class="nav-link btn btn-primary px-3 mx-2" href="#incubation-office"><strong>TIH INCUBATION
+                OFFICE</strong></a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link btn btn-primary px-3 mx-2" href="#"><strong>TIH NOIDA OFFICE</strong></a>
+            <a class="nav-link btn btn-primary px-3 mx-2" href="#office"><strong>TIH NOIDA OFFICE</strong></a>
           </li>
         </ul>
       </div>
     </nav>
-    <section>
+    <!-- MAIN BODY -->
+    <section id="main-office" name="main office">
       <div class="row info-card">
         <div class="plus-card-background"></div>
         <div class="col-12 col-lg-5 col-md-12 come-in-left py-4">
-          <div class="orange-rectangle"></div>
+          <div id="orange-rectangle"></div>
           <h1 class="card-heading">Main Office<br>@IIT Roorkee</h1>
-          <button class="btn btn-secondary">EXPLORE THE OFFICE</button>
+          <a class="btn btn-secondary" href="iHub%20Main%20Office%20IITR/index.html">EXPLORE THE OFFICE</a>
         </div>
         <div class="col-12 col-lg-6 col-md-12 come-in-right card-image-container">
-          <img src="images/ihub1.jpeg" alt="iHub main office" class="card-image">
+          <a href="iHub%20Main%20Office%20IITR/index.html">
+            <img src="images/ihub1.jpeg" alt="iHub main office" class="card-image"></a>
         </div>
-        <div class="grey-square"></div>
-      </div>
-      <div class="row info-card">
-        <div class="col-12 col-lg-6 col-md-12 come-in-left card-image-container">
-          <img src="images/ihub2.jpeg" alt="iHub main office" class="card-image">
-        </div>
-        <div class="col-12 col-lg-5 col-md-12 come-in-right  py-4">
-          <h1 class="card-heading">Incubation Office<br>@IIT Roorkee</h1>
-          <button class="btn btn-secondary">EXPLORE THE OFFICE</button>
-        </div>
-      </div>
-      <div class="row info-card">
-        <div class="col-12 col-lg-5 col-md-12 come-in-left py-4">
-          <h1 class="card-heading">Office<br>@GNEC IIT Roorkee</h1>
-          <button class="btn btn-secondary">EXPLORE THE OFFICE</button>
-        </div>
-        <div class="col-12 col-lg-6 col-md-12 come-in-right card-image-container">
-          <img src="images/ihub3.jpeg" alt="iHub main office" class="card-image">
-        </div>
+        <div id="grey-square"></div>
       </div>
     </section>
+
+    <section id="incubation-office" name="incubation office">
+      <div class="row info-card">
+        <div id="grey-square-2"></div>
+        <div class="col-12 col-lg-6 col-md-12 come-in-left card-image-container" id="info-card-image-2">
+          <a href="iHub%20Incubator%20Office%20IITR/index.html">
+            <img src="images/ihub2.jpeg" alt="iHub main office" class="card-image"></a>
+        </div>
+
+        <div class="col-12 col-lg-5 col-md-12 come-in-right  py-4">
+          <h1 class="card-heading" id="info-heading-2">Incubation Office<br>@IIT Roorkee</h1>
+          <a class="btn btn-secondary" href=>EXPLORE THE OFFICE</a>
+        </div>
+        <div id="orange-rectangle-2"></div>
+      </div>
+    </section>
+
+    <section id="office" name="office at GNEC IIT Roorkee">
+      <div class="row info-card mb-5">
+        <div class="col-12 col-lg-5 col-md-12 come-in-left py-4">
+          <div id="orange-rectangle"></div>
+          <h1 class="card-heading">Office@GNEC <br>IIT Roorkee</h1>
+          <a class="btn btn-secondary" href="iHub%20Office%20GNEC%20Web/index.html">EXPLORE THE OFFICE</a>
+        </div>
+        <div class="col-12 col-lg-6 col-md-12 come-in-right card-image-container">
+          <a href="iHub%20Office%20GNEC%20Web/index.html"><img src="images/ihub3.jpeg" alt="iHub main office"
+              class="card-image"></a>
+        </div>
+        <div id="grey-square"></div>
+      </div>
+    </section>
+
   </div>
   <svg class="arrows">
     <path class="a1" d="M0 0 L30 32 L60 0"></path>
     <path class="a2" d="M0 20 L30 52 L60 20"></path>
     <path class="a3" d="M0 40 L30 72 L60 40"></path>
   </svg>
+  <div class="bottom-spacer"></div>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
