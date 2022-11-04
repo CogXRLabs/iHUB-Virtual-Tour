@@ -370,3 +370,13 @@ canvas {
     left: -1.5rem;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .card-image {
+    height: 10rem;
+  }
+  #grey-square,
+  #grey-square-2 {
+    display: none;
+  }
+}
