@@ -24,41 +24,11 @@
   };
 })(jQuery);
 
-$(window).scroll(function (event) {
-  $(".come-in-left").each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in-left-animation");
-    }
-  });
-  $(".come-in-right").each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in-right-animation");
-    }
-  });
-});
-
 var win = $(window);
 var leftCards = $(".come-in-left");
 var rightCards = $(".come-in-right");
 
-// Already visible modules
-leftCards.each(function (i, el) {
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass("already-visible");
-  }
-});
-
-rightCards.each(function (i, el) {
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass("already-visible");
-  }
-});
-
-win.scroll(function (event) {
+function animateCards(event) {
   leftCards.each(function (i, el) {
     var el = $(el);
     if (el.visible(true)) {
@@ -71,4 +41,9 @@ win.scroll(function (event) {
       el.addClass("come-in-right-animation");
     }
   });
+}
+win.scroll((event) => animateCards(event));
+
+$(document).ready((event) => {
+  animateCards(event);
 });

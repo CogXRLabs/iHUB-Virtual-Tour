@@ -168,7 +168,7 @@ canvas {
 
 @keyframes come-in-left-animation {
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -182,8 +182,13 @@ canvas {
 
 @keyframes come-in-right-animation {
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
+}
+
+.already-visible {
+  transform: translateX(0);
+  animation: none;
 }
 
 .arrows {
