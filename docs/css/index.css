@@ -1,4 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .app {
+  padding-bottom: 4rem;
   background-color: #3f82f4;
 }
 
@@ -72,6 +77,10 @@ canvas {
   border-color: #f1680e;
 }
 
+#info-heading-2 {
+  font-size: xx-large;
+}
+
 .info-card {
   position: relative;
   width: 80%;
@@ -103,7 +112,8 @@ canvas {
   padding-bottom: 1rem;
 }
 
-.orange-rectangle {
+#orange-rectangle,
+#orange-rectangle-2 {
   position: absolute;
   height: 80%;
   width: 2rem;
@@ -111,7 +121,8 @@ canvas {
   background-color: #f1680e;
 }
 
-.grey-square {
+#grey-square,
+#grey-square-2 {
   position: absolute;
   height: 15rem;
   width: 15rem;
@@ -119,6 +130,19 @@ canvas {
   bottom: -3rem;
   background-color: #d9d9d9 !important;
   z-index: -2;
+}
+
+#orange-rectangle-2 {
+  right: 1rem;
+  top: -1rem;
+  left: auto;
+  height: 10rem;
+  width: 10rem;
+  z-index: -2;
+}
+
+#grey-square-2 {
+  left: -2rem;
 }
 
 .plus-card-background {
@@ -130,6 +154,11 @@ canvas {
   background-color: transparent !important;
   background-image: url("../assets/Untitled2.png") !important;
   background-size: cover;
+}
+
+.bottom-spacer {
+  height: 5rem;
+  width: 100%;
 }
 
 .come-in-left-animation {
@@ -165,7 +194,7 @@ canvas {
   height: 80px;
   position: fixed;
   left: 50%;
-  margin-left: -10%;
+  transform: translateX(-50%);
   bottom: 1px;
   z-index: 9;
 }
@@ -224,7 +253,7 @@ canvas {
   .card-image {
     height: 21rem;
   }
-  .grey-square {
+  #grey-square {
     right: 0rem;
     bottom: -2rem;
   }
@@ -242,9 +271,18 @@ canvas {
   .card-image {
     aspect-ratio: 1.5;
   }
-  .grey-square {
+  #info-card-image-2 {
+    order: 2;
+  }
+  #grey-square {
     right: -3rem;
     bottom: -16rem;
+  }
+  #grey-square-2 {
+    bottom: -15rem;
+  }
+  #orange-rectangle-2 {
+    right: -2rem;
   }
 }
 
@@ -258,9 +296,12 @@ canvas {
   .card-image {
     height: 16rem;
   }
-  .grey-square {
+  #grey-square {
     right: -3rem;
     bottom: -11rem;
+  }
+  #grey-square-2 {
+    bottom: -10rem;
   }
 }
 
@@ -271,7 +312,7 @@ canvas {
   .card-image {
     height: 15rem;
   }
-  .grey-square {
+  #grey-square {
     right: -3rem;
     bottom: -10rem;
   }
@@ -292,6 +333,12 @@ canvas {
 @media screen and (max-width: 499px) {
   .card-image {
     height: 12rem;
+  }
+  #grey-square {
+    bottom: -7rem;
+  }
+  #grey-square-2 {
+    bottom: -6rem;
   }
 }
 
