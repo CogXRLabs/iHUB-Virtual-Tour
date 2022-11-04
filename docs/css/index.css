@@ -331,6 +331,12 @@ canvas {
   }
 }
 @media screen and (max-width: 499px) {
+  .card-heading {
+    font-size: 2rem;
+  }
+  #info-heading-2 {
+    font-size: 1.75rem;
+  }
   .card-image {
     height: 12rem;
   }
@@ -345,5 +351,22 @@ canvas {
 @media screen and (max-width: 437px) {
   .navbar-brand > strong {
     display: none;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .card-image {
+    height: 10rem;
+  }
+  #grey-square,
+  #grey-square-2 {
+    height: 10rem;
+    width: 10rem;
+    bottom: -5rem;
+    right: -2.5rem;
+  }
+  #grey-square-2 {
+    bottom: -6rem;
+    left: -1.5rem;
   }
 }
